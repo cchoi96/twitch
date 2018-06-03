@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css?family=Anton");
+/* General */
+body {
+  font-size: 1.2em;
+  font-family: "Anton", sans-serif;
+}
+
+/* Header Styling */
+#header {
+  color: #6441a4;
+}
+#header h1 {
+  font-size: 2em;
+}
+#header img {
+  width: 30%;
+  padding-top: 0.5%;
+  padding-bottom: 1%;
+}
+
+/* Categories */
+#categories {
+  text-align: center;
+  color: #6441a4;
+}
+
+/* Streamers */
+#streamerInfo {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3%;
+  text-align: center;
+  background-color: #6441a4;
+  border-radius: 25px;
+  color: white;
+}
+#streamerInfo a {
+  text-decoration: none;
+  color: white;
+}
+#streamerInfo a:hover {
+  color: black;
+}
+#streamerInfo .row {
+  padding-bottom: 3%;
+}
+#streamerInfo img {
+  border-radius: 50%;
+  width: 50%;
+  border: 2px solid black;
+  background-color: white;
+}
+
+.status {
+  margin-right: -5%;
+  width: 80%;
+  overflow-x: visible;
+  word-wrap: break-word;
+}
