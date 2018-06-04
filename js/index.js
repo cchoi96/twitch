@@ -17,14 +17,14 @@ $(document).ready(function() {
       if (streamerData.stream === null) {
         logo = "https://support.curse.com/hc/en-us/article_attachments/115001768846/Twitch-Icon.png";
         name = streamerData._links.self.slice(37);
-        status = name + " is currently OFFLINE";
-        $("#streamerInfo").prepend("<div class='row'>" + "<div class='col-md-4'>" + "<img src='" + logo + "' class='logo'>" + "</div>" + "<div class='col-md-4'>" + name + "</div>" + "<div class='col-md-4'>" + status + "</div>" + "</div>");
+        status = name + " is currently" + "<span>" + " OFFLINE" + "</span>";
+        $("#streamerInfo").prepend("<div class='streamer'>" + "<div class='category'>" + "<img src='" + logo + "' class='logo'>" + "</div>" + "<div class='category'>" + name + "</div>" + "<div class='category'>" + status + "</div>" + "</div>");
       } else {
         logo = streamerData.stream.channel.logo;
         /*logo = streamerData.stream.preview.medium;*/
-        name = streamerData.stream.channel.display_name;
-        status = name + " is currently streaming " + streamerData.stream.game;
-        $("#streamerInfo").prepend("<div class='row'>" + "<div class='col-md-4'>" + "<img src='" + logo + "' class='logo'>" + "</div>" + "<div class='col-md-4'><a href='" + twitchUrl + name + "' target='_blank'>" + name + "</a></div>" + "<div class='col-md-4 status'>" + status + "</div>" + "</div>");
+        name = "<span>" + streamerData.stream.channel.display_name + "</span>";
+        status = name + " is currently streaming " + "<span>" + streamerData.stream.game + "</span>";
+        $("#streamerInfo").prepend("<div class='streamer'>" + "<div class='category'>" + "<img src='" + logo + "' class='logo'>" + "</div>" + "<div class='category'><a href='" + twitchUrl + name + "' target='_blank'>" + name + "</a></div>" + "<div class='category status'>" + status + "</div>" + "</div>");
       }
     });
   }

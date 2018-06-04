@@ -1,59 +1,76 @@
-@import url("https://fonts.googleapis.com/css?family=Anton");
-/* General */
-body {
-  font-size: 1.2em;
-  font-family: "Anton", sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+* {
+  font-family: 'Anton', sans-serif;
 }
 
-/* Header Styling */
-#header {
-  color: #6441a4;
+.container {
+  margin-top: 20px;
+  width: 90%;
 }
+
 #header h1 {
   font-size: 2em;
-}
-#header img {
-  width: 30%;
-  padding-top: 0.5%;
-  padding-bottom: 1%;
-}
-
-/* Categories */
-#categories {
   text-align: center;
-  color: #6441a4;
 }
 
-/* Streamers */
+#header img {
+  width: 50%;
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+}
+
+#categories {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.category {
+  width: 25%;
+}
+
 #streamerInfo {
   display: flex;
   flex-direction: column;
-  padding-top: 3%;
-  text-align: center;
+  justify-content: space-between;
   background-color: #6441a4;
-  border-radius: 25px;
-  color: white;
-}
-#streamerInfo a {
-  text-decoration: none;
-  color: white;
-}
-#streamerInfo a:hover {
-  color: black;
-}
-#streamerInfo .row {
-  padding-bottom: 3%;
-}
-#streamerInfo img {
-  border-radius: 50%;
-  width: 50%;
-  border: 2px solid black;
-  background-color: white;
+  padding: 3% 5%;
+  margin-bottom: 5%;
+  border-radius: 15px;
+  color: #d3cae8;
 }
 
-.status {
-  margin-right: -5%;
-  width: 80%;
-  overflow-x: visible;
-  word-wrap: break-word;
+#streamerInfo img {
+  width: 50%;
+  max-width: 250px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+#streamerInfo span {
+  color: #FFFACD;
+}
+.streamer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  margin-top: 20px;
+  padding: 15px;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  align-items: center;
+}
+
+.streamer a {
+  text-decoration: none;
+  color: #d3cae8;
+}
+
+.streamer a:hover {
+  color: #fff;
 }
