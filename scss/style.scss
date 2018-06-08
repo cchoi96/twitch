@@ -66,8 +66,10 @@ $white: #fff;
 	a {
 		text-decoration: none;
 		color: $off_purple;
+		transition: all 0.1s ease-out;
 		&:hover {
 			color: $white;
+			font-size: 1.1em;
 		}
 	}
 }
